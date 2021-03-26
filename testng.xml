@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" data-provider-thread-count="3">
+    <listeners>
+        <listener class-name="com.rp.listeners.TestListener"></listener>
+    </listeners>
+    <test name="great automation framework" parallel="methods" thread-count="2">
+        <classes>
+            <!--            <class name="com.rp.tests.LoginPageTests"/>-->
+            <!--            <class name="com.rp.tests.HomePageTests"/>-->
+            <class name="com.rp.tests.OrangeHrmtests"/>
+        </classes>
+    </test>
+</suite>
