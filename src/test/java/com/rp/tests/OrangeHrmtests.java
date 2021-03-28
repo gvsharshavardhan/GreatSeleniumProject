@@ -2,10 +2,13 @@ package com.rp.tests;
 
 import com.rp.pages.OrangeDashBoardPage;
 import com.rp.pages.OrangeLoginPage;
-import com.rp.reports.ExtentLogger;
+import com.rp.utilities.DataProviderUtil;
 import org.assertj.core.api.Assertions;
+import org.openxmlformats.schemas.spreadsheetml.x2006.main.STIconSetType;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.Map;
 
 public final class OrangeHrmtests extends BaseTest {
 
@@ -13,12 +16,12 @@ public final class OrangeHrmtests extends BaseTest {
 
     }
 
-    @Test
-    public void loginLogoutTest1() throws Exception {
+    @Test(dataProvider = "getData", dataProviderClass = DataProviderUtil.class)
+    public void loginLogoutTest1(Map<String,String> map) throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();
-        String title = olp.enterUserName(olp.getUserName())
-                .enterPassword(olp.getPassword())
+        String title = olp.enterUserName(map.get("username"))
+                .enterPassword(map.get("password"))
                 .clickLogin()
                 .clickWelcomeLink()
                 .clickLogoutLink()
@@ -27,22 +30,23 @@ public final class OrangeHrmtests extends BaseTest {
                 .isEqualTo("OrangeHRM");
     }
 
-    @Test
-    public void loginLogoutTest2() throws Exception {
+    @Test(dataProvider = "getData", dataProviderClass = DataProviderUtil.class)
+    public void loginLogoutTest2(Map<String,String> map) throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();
-        String title = olp.enterUserName(olp.getUserName())
-                .enterPassword(olp.getPassword())
+        String title = olp.enterUserName(map.get("username"))
+                .enterPassword(map.get("password"))
                 .clickLogin()
                 .clickWelcomeLink()
                 .clickLogoutLink()
                 .getTitle();
         Assertions.assertThat(title)
                 .isEqualTo("OrangeHRM");
-        ExtentLogger.fail("failed for no reason!", true);
+//        Assert.fail("failed for no reason!");
+//        ExtentLogger.fail("failed for no reason!", true);
     }
 
-    @Test(dependsOnMethods = "loginLogoutTest2")
+    //    @Test(dependsOnMethods = "loginLogoutTest2")
     public void loginLogoutTest3() throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();
@@ -56,7 +60,7 @@ public final class OrangeHrmtests extends BaseTest {
                 .isEqualTo("OrangeHRM");
     }
 
-    @Test
+    //    @Test
     public void loginLogoutTest4() throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();
@@ -70,7 +74,7 @@ public final class OrangeHrmtests extends BaseTest {
                 .isEqualTo("OrangeHRM");
     }
 
-    @Test
+    //    @Test
     public void loginLogoutTest5() throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();

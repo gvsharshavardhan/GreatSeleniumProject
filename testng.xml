@@ -3,8 +3,9 @@
 <suite name="All Test Suite" data-provider-thread-count="3">
     <listeners>
         <listener class-name="com.rp.listeners.TestListener"></listener>
+        <listener class-name="com.rp.listeners.MethodInterceptor"></listener>
     </listeners>
-    <test name="great automation framework" parallel="methods" thread-count="2">
+    <test name="great automation framework" parallel="methods" thread-count="1">
         <classes>
             <!--            <class name="com.rp.tests.LoginPageTests"/>-->
             <!--            <class name="com.rp.tests.HomePageTests"/>-->

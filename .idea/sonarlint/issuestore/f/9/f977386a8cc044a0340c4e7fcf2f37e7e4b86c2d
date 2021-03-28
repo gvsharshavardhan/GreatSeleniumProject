@@ -1,5 +1,4 @@
 
 «
-java:S3577	"Rename class "OrangeHrmtests" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(‡¦ε8Ά …/
-S
-java:S5976"6Replace these 4 tests with a single Parameterized one.(φό‚‘8ÿƒΉΌ†/
+java:S3577
+"Rename class "OrangeHrmtests" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(‡¦ε8Ά …/

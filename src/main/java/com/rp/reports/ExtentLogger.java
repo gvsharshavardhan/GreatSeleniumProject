@@ -1,12 +1,8 @@
 package com.rp.reports;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.model.Media;
-import com.rp.driver.DriverManager;
 import com.rp.enums.ConfigProperties;
 import com.rp.utilities.PropertiesUtil;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import com.rp.utilities.ScreenShotUtil;
 
 public final class ExtentLogger {
 
@@ -33,7 +29,7 @@ public final class ExtentLogger {
 
     public static void pass(String message, boolean isScreenShotRequired) throws Exception {
         if (PropertiesUtil.getPropertyValue(ConfigProperties.PASSEDSCREENSHOT).equalsIgnoreCase("yes") && isScreenShotRequired) {
-            ExtentReportManager.getTest().pass(message, takeScreenShot());
+            ExtentReportManager.getTest().pass(message, ScreenShotUtil.takeScreenShot());
         } else {
             pass(message);
         }
@@ -42,7 +38,7 @@ public final class ExtentLogger {
     public static void fail(String message, boolean isScreenShotRequired) throws Exception {
         if (isScreenShotRequired &&
                 PropertiesUtil.getPropertyValue(ConfigProperties.FAILEDSCREENSHOT).equalsIgnoreCase("yes")) {
-            ExtentReportManager.getTest().fail(message, takeScreenShot());
+            ExtentReportManager.getTest().fail(message, ScreenShotUtil.takeScreenShot());
         } else {
             fail(message);
         }
@@ -51,7 +47,7 @@ public final class ExtentLogger {
     public static void skip(String message, boolean isScreenShotRequired) throws Exception {
         if (isScreenShotRequired &&
                 PropertiesUtil.getPropertyValue(ConfigProperties.SKIPPEDSCREENSHOT).equalsIgnoreCase("yes")) {
-            ExtentReportManager.getTest().skip(message, takeScreenShot());
+            ExtentReportManager.getTest().skip(message, ScreenShotUtil.takeScreenShot());
         } else {
             skip(message);
         }
@@ -59,15 +55,11 @@ public final class ExtentLogger {
 
     public static void info(String message, boolean isScreenShotRequired) {
         if (isScreenShotRequired) {
-            ExtentReportManager.getTest().info(message, takeScreenShot());
+            ExtentReportManager.getTest().info(message, ScreenShotUtil.takeScreenShot());
         } else {
             info(message);
         }
         ExtentReportManager.getTest().info(message);
     }
 
-    public static Media takeScreenShot() {
-        return MediaEntityBuilder
-                .createScreenCaptureFromBase64String(((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64)).build();
-    }
 }

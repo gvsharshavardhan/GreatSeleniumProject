@@ -1,11 +1,11 @@
 
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÉŠòÿÿÿÿÿ8‘Á…/
-X	java:S125*"<This block of commented-out lines of code should be removed.(©ÊØ¹8¢Şµ­†/
-‡	java:S116"fRename this field "DASHBOARD_PAGE_HEADER_XPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¬ºæùÿÿÿÿ8‘Á…/
-C
-java:S1170"!Make this final field static too.(¡¬ºæùÿÿÿÿ8Ìí†…/
 w	java:S116"VRename this field "LOGOUT_LINK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùíª¹ÿÿÿÿÿ8ëÄŠ…/
-	java:S116"lRename this field "QUICK_LAUNCH_OPTIONS_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ó–­üÿÿÿÿ8‘Á…/
-x	java:S116"WRename this field "WELCOME_LINK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¯î…üÿÿÿÿ8£…‰…/
 C
 java:S1170"!Make this final field static too.(™ó–­üÿÿÿÿ8Â¼†…/
+X	java:S125*"<This block of commented-out lines of code should be removed.(©ÊØ¹8¢Şµ­†/
+	java:S116"lRename this field "QUICK_LAUNCH_OPTIONS_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ó–­üÿÿÿÿ8‘Á…/
+‡	java:S116"fRename this field "DASHBOARD_PAGE_HEADER_XPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¬ºæùÿÿÿÿ8‘Á…/
+x	java:S116"WRename this field "WELCOME_LINK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ¯î…üÿÿÿÿ8£…‰…/
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÉŠòÿÿÿÿÿ8‘Á…/
+C
+java:S1170"!Make this final field static too.(¡¬ºæùÿÿÿÿ8Ìí†…/

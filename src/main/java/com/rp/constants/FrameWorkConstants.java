@@ -11,13 +11,14 @@ public final class FrameWorkConstants {
 
     private final static String PROPERTYFILEPATH = System.getProperty("user.dir") + "/src/test/resources/config/config.properties";
     private final static String JSONFILEPATH = System.getProperty("user.dir") + "/src/test/resources/jsons/myJson.json";
-
     private final static String CHROMEDRIVERPATH = System.getProperty("user.dir") + "/src/test/resources/executables/chromedriver.exe";
-    private static String EXTENTREPORTPATH = "";
     private final static String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir") + "/extent-test-output/";
+    private final static String EXCELPATH = System.getProperty("user.dir") + "/src/test/resources/excel/datatest.xls";
     private final static int EXPLICITWAIT = 10;
     private final static int IMPLICTWAIT = 10;
-
+    private static String EXTENTREPORTPATH = "";
+    private final static String RUNMANAGERSHEET = "Sheet1";
+    private final static String ITERATIONDATASHEET = "data";
 
     /*
     I don't want others to create an object from this class.
@@ -28,8 +29,12 @@ public final class FrameWorkConstants {
 
     }
 
+    public static String getEXCELPATH() {
+        return EXCELPATH;
+    }
+
     public static String getExtentReportPath() throws Exception {
-        if(EXTENTREPORTPATH.isBlank()){
+        if (EXTENTREPORTPATH.isBlank()) {
             EXTENTREPORTPATH = getExtentReportFileName();
         }
         return EXTENTREPORTPATH;
@@ -61,5 +66,13 @@ public final class FrameWorkConstants {
 
     public static String getJSONFILEPATH() {
         return JSONFILEPATH;
+    }
+
+    public static String getRUNMANAGERSHEET() {
+        return RUNMANAGERSHEET;
+    }
+
+    public static String getITERATIONDATASHEET() {
+        return ITERATIONDATASHEET;
     }
 }
