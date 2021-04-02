@@ -1,6 +1,7 @@
 package com.rp.utilities;
 
 import com.rp.constants.FrameWorkConstants;
+import com.rp.exceptions.ImproperExcelFileUsageException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -40,7 +41,7 @@ public final class ExcelUtil {
                 l.add(map);
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            throw new ImproperExcelFileUsageException("Excel sheet is not found!! or incorrect path!!",e);
         } catch (IOException e) {
             e.printStackTrace();
         }

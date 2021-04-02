@@ -4,20 +4,17 @@ import com.rp.annotations.FrameworkAnnotation;
 import com.rp.reports.ExtentLogger;
 import com.rp.reports.ExtentReportConfig;
 import com.rp.reports.ExtentReportManager;
-import lombok.SneakyThrows;
 import org.testng.*;
 
 import java.util.Arrays;
 
 public class TestListener implements ITestListener, ISuiteListener {
-    @SneakyThrows
+
     @Override
     public void onStart(ISuite suite) {
         ExtentReportConfig.initReport();
     }
 
-
-    @SneakyThrows
     @Override
     public void onFinish(ISuite suite) {
         ExtentReportConfig.closeReport();

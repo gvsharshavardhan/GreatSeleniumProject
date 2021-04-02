@@ -2,10 +2,14 @@ package com.rp.utilities;
 
 import com.rp.constants.FrameWorkConstants;
 import com.rp.enums.ConfigProperties;
+import com.rp.exceptions.ImproperPropertyFileUsageException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Properties;
 
 public final class PropertiesUtil {
 
@@ -33,17 +37,17 @@ public final class PropertiesUtil {
         }
     }
 
-    public static String get(ConfigProperties key) throws Exception {
+    public static String get(ConfigProperties key) {
         if (Objects.isNull(configMap.get(key.toString().toLowerCase())) || Objects.isNull(key)) {
-            throw new Exception("property name :" + key + " is not found. Please check config.properties file!!");
+            throw new ImproperPropertyFileUsageException("property name :" + key + " is not found. Please check config.properties file!!");
         } else {
             return configMap.get(key.name().toLowerCase());
         }
     }
 
-    public static String getPropertyValue(ConfigProperties key) throws Exception {
+    public static String getPropertyValue(ConfigProperties key) {
         if (Objects.isNull(prop.getProperty(key.toString().toLowerCase())) || Objects.isNull(key)) {
-            throw new Exception("property name :" + key + " is not found. Please check config.properties file!!");
+            throw new ImproperPropertyFileUsageException("property name :" + key + " is not found. Please check config.properties file!!");
         } else {
             return prop.getProperty(key.name().toLowerCase());
         }

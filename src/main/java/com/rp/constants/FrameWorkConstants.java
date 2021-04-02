@@ -12,7 +12,7 @@ public final class FrameWorkConstants {
     private final static String PROPERTYFILEPATH = System.getProperty("user.dir") + "/src/test/resources/config/config.properties";
     private final static String JSONFILEPATH = System.getProperty("user.dir") + "/src/test/resources/jsons/myJson.json";
     private final static String CHROMEDRIVERPATH = System.getProperty("user.dir") + "/src/test/resources/executables/chromedriver.exe";
-//    private final static String FIREFOXDRIVERPATH = System.getProperty("user.dir") + "/src/test/resources/executables/chromedriver.exe";
+    //    private final static String FIREFOXDRIVERPATH = System.getProperty("user.dir") + "/src/test/resources/executables/chromedriver.exe";
     private final static String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir") + "/extent-test-output/";
     private final static String EXCELPATH = System.getProperty("user.dir") + "/src/test/resources/excel/datatest.xls";
     private final static int EXPLICITWAIT = 10;
@@ -34,14 +34,14 @@ public final class FrameWorkConstants {
         return EXCELPATH;
     }
 
-    public static String getExtentReportPath() throws Exception {
+    public static String getExtentReportPath() {
         if (EXTENTREPORTPATH.isBlank()) {
             EXTENTREPORTPATH = getExtentReportFileName();
         }
         return EXTENTREPORTPATH;
     }
 
-    private static String getExtentReportFileName() throws Exception {
+    private static String getExtentReportFileName() {
         if (PropertiesUtil.get(ConfigProperties.OVERRIDEREPORT).equalsIgnoreCase("yes")) {
             return EXTENTREPORTFOLDERPATH + "index.html";
         } else {

@@ -15,7 +15,7 @@ public final class OrangeLoginPage extends BasePage {
     private final String FORGOT_PASSOWORD_LINK_TEXT = "Forgot your password?";
 
 
-    public void goToOrangeLoginPage() throws Exception {
+    public void goToOrangeLoginPage() {
         goToPage(PropertiesUtil.get(ConfigProperties.URL));
     }
 
