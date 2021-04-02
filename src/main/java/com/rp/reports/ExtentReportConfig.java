@@ -3,10 +3,12 @@ package com.rp.reports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.rp.enums.CategoryType;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Objects;
 
 import static com.rp.constants.FrameWorkConstants.getExtentReportPath;
@@ -43,5 +45,19 @@ public final class ExtentReportConfig {
 
     public static void createTest(String testName) {
         ExtentReportManager.setTest(extent.createTest(testName));
+    }
+
+    public static void addAuthors(String[] authors) {
+        System.out.println(Arrays.toString(authors));
+        for (String author : authors) {
+            ExtentReportManager.getTest().assignAuthor(author);
+        }
+    }
+
+    public static void addGroups(CategoryType[] groups) {
+        System.out.println(Arrays.toString(groups));
+        for (CategoryType group : groups) {
+            ExtentReportManager.getTest().assignCategory(group.toString());
+        }
     }
 }

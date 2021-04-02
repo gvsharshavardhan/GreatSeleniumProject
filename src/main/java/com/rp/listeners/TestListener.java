@@ -1,5 +1,6 @@
 package com.rp.listeners;
 
+import com.rp.annotations.FrameworkAnnotation;
 import com.rp.reports.ExtentLogger;
 import com.rp.reports.ExtentReportConfig;
 import com.rp.reports.ExtentReportManager;
@@ -24,7 +25,13 @@ public class TestListener implements ITestListener, ISuiteListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        ExtentReportConfig.createTest(result.getName()+":"+result.getMethod().getDescription());
+        ExtentReportConfig.createTest(result.getName() + ":" + result.getMethod().getDescription());
+
+        ExtentReportConfig.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
+                .author());
+        ExtentReportConfig.addGroups(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
+                .groups());
+
         ExtentLogger.info(result.getName() + " started!");
     }
 

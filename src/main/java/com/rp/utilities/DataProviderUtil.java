@@ -15,7 +15,7 @@ public final class DataProviderUtil {
 
     }
 
-    @DataProvider
+    @DataProvider(parallel = true)
     public static Object[] getData(Method method) {
         String testname = method.getName();
         if (fullList.isEmpty()) {

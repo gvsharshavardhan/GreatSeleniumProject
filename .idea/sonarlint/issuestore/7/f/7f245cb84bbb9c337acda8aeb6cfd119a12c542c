@@ -1,20 +1,24 @@
 
-b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(£…Ü†8§ý…‚‡/
+k
+java:S1192"IDefine a constant instead of duplicating this literal "user.dir" 5 times.(ƒæÆÊýÿÿÿÿ8’Ëéí…/
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(˜âøˆ
 a
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ô÷×8«›õÁ†/
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ô÷×8«›õÁ†/
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(£…Ü†8§ý…‚‡/
+x
+java:S3008"[Rename this field "EXTENTREPORTPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü¶Ž‹8¾˜é‘‡/
+X	java:S125"<This block of commented-out lines of code should be removed.(ú—¹8Ä÷µé‡/
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ìÿé·üÿÿÿÿ8¬¦î¨…/
 a
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ò¨É]8’Ëéí…/
 g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ìÿé·üÿÿÿÿ8¬¦î¨…/
-[
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(˜âøˆ
-g	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.( ñÍØûÿÿÿÿ8ˆéƒƒ‡/
-k
-java:S1192"IDefine a constant instead of duplicating this literal "user.dir" 5 times.(ƒæÆÊýÿÿÿÿ8’Ëéí…/
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ßµœ¦ûÿÿÿÿ8²§íÁ†/
 g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ßµœ¦ûÿÿÿÿ8²§íÁ†/
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ç¸â ûÿÿÿÿ8…úØÃ‡/
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(á‘ùôøÿÿÿÿ8…úØÃ‡/
 g
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ƒæÆÊýÿÿÿÿ8€³€†…/
-x
-java:S3008"[Rename this field "EXTENTREPORTPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü¶Ž‹8¾˜é‘‡/

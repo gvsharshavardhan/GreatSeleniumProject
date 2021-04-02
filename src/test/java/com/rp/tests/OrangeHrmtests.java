@@ -2,9 +2,7 @@ package com.rp.tests;
 
 import com.rp.pages.OrangeDashBoardPage;
 import com.rp.pages.OrangeLoginPage;
-import com.rp.utilities.DataProviderUtil;
 import org.assertj.core.api.Assertions;
-import org.openxmlformats.schemas.spreadsheetml.x2006.main.STIconSetType;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,8 +14,8 @@ public final class OrangeHrmtests extends BaseTest {
 
     }
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviderUtil.class)
-    public void loginLogoutTest1(Map<String,String> map) throws Exception {
+    @Test
+    public void loginLogoutTest1(Map<String, String> map) throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();
         String title = olp.enterUserName(map.get("username"))
@@ -30,8 +28,9 @@ public final class OrangeHrmtests extends BaseTest {
                 .isEqualTo("OrangeHRM");
     }
 
-    @Test(dataProvider = "getData", dataProviderClass = DataProviderUtil.class)
-    public void loginLogoutTest2(Map<String,String> map) throws Exception {
+    //    (dataProvider = "getData", dataProviderClass = DataProviderUtil.class, retryAnalyzer = RetryFailedTest.class)
+    @Test
+    public void loginLogoutTest2(Map<String, String> map) throws Exception {
         OrangeLoginPage olp = new OrangeLoginPage();
         olp.goToOrangeLoginPage();
         String title = olp.enterUserName(map.get("username"))

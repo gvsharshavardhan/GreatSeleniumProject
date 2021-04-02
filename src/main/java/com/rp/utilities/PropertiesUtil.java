@@ -17,8 +17,7 @@ public final class PropertiesUtil {
     }
 
     static {
-        try {
-            FileInputStream fileInputStream = new FileInputStream(FrameWorkConstants.getPROPERTYFILEPATH());
+        try (FileInputStream fileInputStream = new FileInputStream(FrameWorkConstants.getPROPERTYFILEPATH())) {
             prop.load(fileInputStream);
 /*
             for (Map.Entry entry : prop.entrySet()) {

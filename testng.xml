@@ -4,12 +4,14 @@
     <listeners>
         <listener class-name="com.rp.listeners.TestListener"></listener>
         <listener class-name="com.rp.listeners.MethodInterceptor"></listener>
+        <listener class-name="com.rp.listeners.AnnotationTransformer"></listener>
     </listeners>
     <test name="great automation framework" parallel="methods" thread-count="1">
         <classes>
             <!--            <class name="com.rp.tests.LoginPageTests"/>-->
             <!--            <class name="com.rp.tests.HomePageTests"/>-->
-            <class name="com.rp.tests.OrangeHrmtests"/>
+<!--            <class name="com.rp.tests.OrangeHrmtests"/>-->
+            <class name="com.rp.tests.AmazonTests"/>
         </classes>
     </test>
 </suite>

@@ -9,7 +9,10 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public final class ExcelUtil {
 
@@ -17,10 +20,8 @@ public final class ExcelUtil {
     }
 
     public static List<Map<String, String>> getTestDetails(String sheetname) {
-        FileInputStream fis = null;
         List<Map<String, String>> l = new ArrayList<>();
-        try {
-            fis = new FileInputStream(FrameWorkConstants.getEXCELPATH());
+        try (FileInputStream fis = new FileInputStream(FrameWorkConstants.getEXCELPATH())) {
             HSSFWorkbook workbook = new HSSFWorkbook(fis);
             HSSFSheet sheet = workbook.getSheet(sheetname);
 
@@ -42,14 +43,6 @@ public final class ExcelUtil {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (Objects.nonNull(fis)) {
-                    fis.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
         return l;
     }
