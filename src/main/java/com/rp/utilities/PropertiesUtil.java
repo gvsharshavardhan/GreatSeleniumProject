@@ -34,6 +34,7 @@ public final class PropertiesUtil {
 
         } catch (IOException e) {
             e.printStackTrace();
+            System.exit(0);
         }
     }
 

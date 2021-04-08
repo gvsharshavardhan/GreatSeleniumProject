@@ -3,6 +3,7 @@ package com.rp.pages;
 import com.rp.driver.DriverManager;
 import com.rp.enums.ConfigProperties;
 import com.rp.enums.WaitStrategy;
+import com.rp.utilities.DecodeUtils;
 import com.rp.utilities.PropertiesUtil;
 import org.openqa.selenium.By;
 
@@ -37,7 +38,7 @@ public final class OrangeLoginPage extends BasePage {
     }
 
     public OrangeLoginPage enterPassword(String password) {
-        sendKeys(By.cssSelector(PASSWORD_FIELD_CSS_SELECTOR), password, WaitStrategy.PRESENCE);
+        sendKeys(By.cssSelector(PASSWORD_FIELD_CSS_SELECTOR), DecodeUtils.getDecodedString(password), WaitStrategy.PRESENCE);
         return this;
     }
 

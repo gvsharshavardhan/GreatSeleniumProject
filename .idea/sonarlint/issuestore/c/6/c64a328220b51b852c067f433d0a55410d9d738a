@@ -1,16 +1,16 @@
 
-‡	java:S116"fRename this field "PASSWORD_FIELD_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕşŞ‘øÿÿÿÿ8¥ï¬…/
->
-java:S1170"!Make this final field static too.(Õïı8µãÅŸ…/
+|	java:S116"aRename this field "CREDENTIALS_TEXT_XPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÎµ'8¥ï¬…/
+†	java:S116"eRename this field "FORGOT_PASSOWORD_LINK_TEXT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÆÇ’ıÿÿÿÿ8¥ï¬…/
+	java:S116"cRename this field "INPUT_FIELD_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õïı8¥ï¬…/
 C
-java:S1170"!Make this final field static too.(Ãæ†Úşÿÿÿÿ8µãÅŸ…/
-	java:S116"cRename this field "INPUT_FIELD_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õïı8¥ï¬…/
-|	java:S116"aRename this field "CREDENTIALS_TEXT_XPATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÎµ'8¥ï¬…/
-…	java:S116"dRename this field "LOGIN_BUTTON_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãæ†Úşÿÿÿÿ8¥ï¬…/
-C
-java:S1170"!Make this final field static too.(ÕşŞ‘øÿÿÿÿ8µãÅŸ…/
+java:S1170"!Make this final field static too.(ƒÆÇ’ıÿÿÿÿ8µãÅŸ…/
+‡	java:S116"fRename this field "PASSWORD_FIELD_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕşŞ‘øÿÿÿÿ8¥ï¬…/
 =
-java:S1170"!Make this final field static too.(ªÎµ'8ŞŞë…/
+java:S1170"!Make this final field static too.(ªÎµ'8ŞŞë…/
 C
-java:S1170"!Make this final field static too.(ƒÆÇ’ıÿÿÿÿ8µãÅŸ…/
-†	java:S116"eRename this field "FORGOT_PASSOWORD_LINK_TEXT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÆÇ’ıÿÿÿÿ8¥ï¬…/
+java:S1170"!Make this final field static too.(ÕşŞ‘øÿÿÿÿ8µãÅŸ…/
+>
+java:S1170"!Make this final field static too.(Õïı8µãÅŸ…/
+…	java:S116"dRename this field "LOGIN_BUTTON_CSS_SELECTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãæ†Úşÿÿÿÿ8¥ï¬…/
+C
+java:S1170"!Make this final field static too.(Ãæ†Úşÿÿÿÿ8µãÅŸ…/
